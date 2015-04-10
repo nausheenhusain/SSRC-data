@@ -80,7 +80,7 @@
 	<!-- <div class="row"> -->
 		<!-- <div class="col-sm-8 col-sm-offset-2"> -->
 
-			<h3> * Download data here. Save folder to Desktop, or somewhere easily accessible. </h3>
+			<h3> * Download data <a href="https://github.com/nausheenhusain/SSRC-data/tree/gh-pages"> here</a>. Save folder to Desktop, or somewhere easily accessible. </h3>
 			<h3> * Open up your command line (Terminal on Mac). </h3>
 			<h3> * Let's install csvkit using <code>$ sudo pip install csvkit</code>. You may have to type in a password.</h3>
 			<h3> * Change directories into the data folder. <code>$ cd /Users/your_name/Desktop/hate_crimes_data </code> </h3>
@@ -140,6 +140,7 @@
 	<h2>OH WAIT. WE CAN TOTALLY DO THAT.</h2>
 	<h3>Let's see what csvjoin can do for us. Try <code>csvjoin -c Participating_state 2001_cut.csv 2013_cut.csv | csvlook | head</code>.</h3>
 	<h3>Let's use it with our pipes to cut out the extra state column: <code>csvjoin -c Participating_state 2001_cut.csv 2013_cut.csv | csvcut -c 1,2,4 > finaldata.csv</code>.</h3>
+	<h3>Let's take a look at the data in its final, chartable form: <code>csvlook finaldata.csv</code>. Isn't it beautiful?</h3>
 
 </div>
 
