@@ -1,9 +1,10 @@
+#imports necessary programs for this script
 import csv
 import tempfile
 import shutil
 
 #inputs appropriate file from same folder
-input_file = '2013_percentage.csv'
+input_file = '2001_percentage.csv'
 
 #opens input_file and temporary file, where it will write results
 with open(input_file, 'rb') as f, \
@@ -15,7 +16,7 @@ with open(input_file, 'rb') as f, \
 	writer = csv.writer(out_f)
 
 #Header row
-	writer.writerow(next(reader) + ["2013_percentage"])	
+	writer.writerow(next(reader) + ["2001_percentage"])	
 
 #Try/Except block prevents the code from stopping at every string, since there are strings in the csvs.
 	for row in reader:
@@ -25,10 +26,6 @@ with open(input_file, 'rb') as f, \
 			writer.writerows([row + [val1 / val2 * 100]])
 		except ValueError:
 			print('There are strings in this file.')
-
-# with open(input_file, 'wb') as csvfile:
-# 	writer = csv.writer(csvfile)
-# 	writer.writerow(["Participating_states", "Number_of_participating_agencies", "Population_covered", "Agencies_submitting_incident_reports", "Total_number_of_incidents_reported", "Reporting_percentage"])
 
 #Overwrites original file with new content.
 shutil.move(out_f.name, input_file)
