@@ -101,7 +101,7 @@
 			<h3> * Let's get some more information about our columns using <code>csvstat 2001_percentage.csv</code>.</h3>
 			<h3> * Let's say we want to focus on the agency information for each state. Try <code>$ csvcut -c 1,2,4 2001_percentage.csv | csvlook | head</code> .</h3>
 			<h2>Pipes are awesome!</h2>
-			<h3> * Let's get even more specific. Try <code>csvcut -c 1,2,4 2001_percentage.csv | csvgrep -c Participating_states -m Illinois | csvlook</code>.</h3>
+			<h3> * Let's get even more specific. Try <code>csvcut -c 1,2,4 2001_percentage.csv | csvgrep -c Participating_state -m Illinois | csvlook</code>.</h3>
 			<h3> * Organization is important. Check out what happens when you type <code>csvcut -c 1,2,4 2001_percentage.csv | csvsort -c Number_of_participating_agencies -r | csvlook</code>.</h3>
 			<h3> ** What would you type into the command line to order this data by most to least populated states?</h3>
 
